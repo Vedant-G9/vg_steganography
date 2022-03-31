@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="240dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_img_chos_bg"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/choose_image_button"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text=""
+
+        android:background="@drawable/ic_choose_bt"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="126dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/choose_image_button"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/ic_message"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="145dp"
+        android:layout_height="26dp"
+        android:layout_below="@id/message"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/ic_secret_key" />
+
+    <EditText
+        android:id="@+id/secret_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/ic_messagebx"
+        android:ems="10"
+        android:hint="Enter secret key"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/secret_key"
+        android:layout_alignTop="@+id/textView"
+        android:background="@drawable/ic_messagebx"
+        android:ems="10"
+        android:hint="Enter message"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/encode_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toStartOf="@+id/secret_key"
+        android:background="@drawable/ic_encode_bt_ena"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/save_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/encode_button"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/encode_button"
+        android:layout_toRightOf="@id/encode_button"
+        android:background="@drawable/ic_save_bt"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/whether_encoded"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageview"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_encodeimagetxt"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

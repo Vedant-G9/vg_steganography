@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vedant.steganography">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@mipmap/logo"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:label="Steganography"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.vedant.steganography.AudioDecode"
+            android:exported="false" />
+
+        <activity android:name=".ShowExtractedMessage"
+            android:exported="true"/>
+        <activity
+            android:name="com.vedant.steganography.AudioEncode"
+            android:exported="false" />
+        <activity
+            android:name="com.vedant.steganography.AudioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vedant.steganography.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vedant.steganography.mediaSelection"
+            android:theme="@style/AppTheme.splashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.vedant.steganography.Encode" />
+        <activity android:name="com.vedant.steganography.Decode" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="it.steganography.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

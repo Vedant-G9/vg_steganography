@@ -1,0 +1,5 @@
+include ':app', ':ImageSteganographyLibrary'
+include ':materialfilepicker'
+include ':lib'
+include ':tablayoutsupport'
+include ':Isjwzh'
